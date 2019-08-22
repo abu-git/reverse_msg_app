@@ -65,7 +65,6 @@ class SubmitPage extends Component{
 			axios.post('/submit', messagePost)
 				.then(function(res){
 					console.log(res.status);
-					//this.props.history.push('/view-all');
 				})
 				.catch(function(err){
 					console.log(err);

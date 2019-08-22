@@ -26,10 +26,10 @@ class ViewBoard extends Component{
 	}
 
 	componentDidMount(){
+		//GET request to retrieve data from database
 		axios.get('/view-all')
 			.then((res) => {
 				this.setState({ messages: res.data });
-				//console.log(this.state.messages);
 			}).catch((err) =>{
 				console.log(err.message);
 			});
