@@ -22,6 +22,7 @@ class SubmitPage extends Component{
 		this.onChange = this.onChange.bind(this);
 	}
 
+	//Validation for submitted data
 	validateInput(){
 		if(validator.isEmpty(this.state.fullName)){
 			this.setState({ errors: "Full Name field is required"});
@@ -53,15 +54,15 @@ class SubmitPage extends Component{
 		e.preventDefault();
 		const validate = this.validateInput();
 		if(validate){
-			//POST to Backend
+			//create object to be sent to Backend
 			const messagePost = {
 				fullName: this.state.fullName,
 				phoneNumber: this.state.phoneNumber,
 				email: this.state.email,
 				message: this.state.message
 			}
-			console.log(messagePost.fullName);
 
+			//POST to Backend
 			axios.post('/submit', messagePost)
 				.then(function(res){
 					console.log(res.status);

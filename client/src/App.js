@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//import Components
 import LandingPage from './Components/Submit';
 import MessageBoard from './Components/ViewBoard';
 
