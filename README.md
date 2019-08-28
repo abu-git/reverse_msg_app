@@ -14,7 +14,7 @@ These instructions will get your copy of the full stack app up and running on yo
 * cors
 * concurrently
 * body-parser 
-* nodemonn
+* nodemon
 * axios
 * bootstrap
 * rc-if-else
